@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System for B.Tech CSE Fresher */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Dominant colors - Black/Dark Blue foundation */
+    --background: 220 25% 4%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Purple accent system - Various shades for hierarchy */
+    --primary: 270 95% 65%;        /* Bright purple for main CTAs */
+    --primary-foreground: 210 20% 95%;
+
+    --secondary: 260 60% 45%;      /* Deep violet for secondary elements */
+    --secondary-foreground: 210 20% 95%;
+
+    --accent: 280 85% 75%;         /* Lavender for highlights */
+    --accent-foreground: 220 25% 4%;
+
+    /* Neutral grays for balance */
+    --muted: 220 15% 12%;
+    --muted-foreground: 210 15% 70%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 270 95% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom purple gradient system */
+    --hero-gradient: linear-gradient(135deg, hsl(270 95% 65%), hsl(260 60% 45%));
+    --card-gradient: linear-gradient(145deg, hsl(220 20% 8%), hsl(220 15% 12%));
+    --accent-gradient: linear-gradient(90deg, hsl(270 95% 65%), hsl(280 85% 75%));
+    --text-gradient: linear-gradient(90deg, hsl(270 95% 65%), hsl(280 85% 75%));
+    --violet-gradient: linear-gradient(45deg, hsl(260 60% 45%), hsl(270 95% 65%));
+    
+    /* Enhanced shadows with purple glow */
+    --shadow-glow: 0 0 50px hsl(270 95% 65% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(220 25% 2% / 0.8);
+    --shadow-purple: 0 20px 40px -12px hsl(270 95% 65% / 0.25);
+    
+    /* Animation and transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 270 95% 65%;
+    --sidebar-primary-foreground: 210 20% 95%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 270 95% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-glow {
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+    background: var(--card-gradient);
+  }
+  
+  .card-glow:hover {
+    box-shadow: var(--shadow-purple);
+    transform: translateY(-4px);
+  }
+  
+  .hero-background {
+    background: var(--hero-gradient);
+  }
+  
+  .purple-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Enhanced purple button variants */
+  .btn-purple-primary {
+    background: var(--violet-gradient);
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(270 95% 65%);
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-purple-primary:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  /* White space helpers */
+  .section-spacing {
+    padding: 5rem 0;
+  }
+  
+  .content-spacing {
+    margin-bottom: 3rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,163 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
+
+const Contact = () => {
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "your.email@example.com",
+      href: "mailto:your.email@example.com"
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+91 12345 67890",
+      href: "tel:+911234567890"
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Your City, State, India",
+      href: "#"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: Github,
+      label: "GitHub",
+      href: "https://github.com/yourusername"
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn", 
+      href: "https://linkedin.com/in/yourprofile"
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 slide-up">
+          <Badge variant="outline" className="mb-4">
+            Get In Touch
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Let's <span className="gradient-text">Connect</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            I'm actively looking for new opportunities and would love to hear from you. 
+            Whether you have a job opportunity or just want to connect, feel free to reach out!
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8 slide-up">
+            <Card className="card-glow">
+              <CardHeader>
+                <CardTitle className="text-xl">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <div className="p-3 rounded-full bg-primary/20">
+                      <item.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-muted-foreground">{item.label}</p>
+                      {item.href !== "#" ? (
+                        <a 
+                          href={item.href} 
+                          className="font-medium hover:text-primary transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="font-medium">{item.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="card-glow">
+              <CardHeader>
+                <CardTitle className="text-xl">Follow Me</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full bg-card border border-border hover:bg-muted transition-colors duration-300 group"
+                    >
+                      <social.icon className="h-6 w-6 group-hover:scale-110 transition-transform" />
+                    </a>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <div className="slide-up">
+            <Card className="card-glow">
+              <CardHeader>
+                <CardTitle className="text-xl">Send Message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">First Name</label>
+                      <Input placeholder="Your first name" />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Last Name</label>
+                      <Input placeholder="Your last name" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Email</label>
+                    <Input type="email" placeholder="your.email@example.com" />
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Subject</label>
+                    <Input placeholder="What's this about?" />
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Message</label>
+                    <Textarea 
+                      placeholder="Tell me about your project or opportunity..."
+                      className="min-h-[120px]"
+                    />
+                  </div>
+                  
+                  <Button type="submit" className="w-full">
+                    <Send className="mr-2 h-4 w-4" />
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
