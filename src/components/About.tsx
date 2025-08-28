@@ -57,7 +57,7 @@ const About = () => {
                   in a collaborative environment.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Node.js", "Python", "Java", "JavaScript", "TypeScript"].map((tech) => (
+                  {["React", "Node.js", "Python", "Java", "JavaScript", "TypeScript", "TensorFlow", "Matplotlib"].map((tech) => (
                     <Badge key={tech} variant="secondary">
                       {tech}
                     </Badge>
