@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/prats4344" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-muted transition-colors duration-300 group"
@@ -23,7 +23,7 @@ const Footer = () => {
               <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/pratiyushakanungo-sp4344" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-muted transition-colors duration-300 group"
@@ -31,7 +31,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:kanungopratiyusha@gmail.com"
               className="p-2 rounded-full hover:bg-muted transition-colors duration-300 group"
             >
               <Mail className="h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -41,10 +41,10 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center text-sm text-muted-foreground">
             <p className="flex items-center justify-center gap-1">
-              © {currentYear} Made with <Heart className="h-4 w-4 text-red-500" /> by Your Name
+              © {currentYear} Made with <Heart className="h-4 w-4 text-red-500" /> by Pratiyusha
             </p>
             <p className="mt-1">
-              B.Tech CSE Graduate • Ready for New Opportunities
+              B.Tech CSE AIML • Ready for New Opportunities
             </p>
           </div>
         </div>
@@ -54,3 +54,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
