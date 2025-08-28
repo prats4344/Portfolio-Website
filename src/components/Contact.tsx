@@ -50,7 +50,7 @@ const Contact = () => {
     emailjs
       .sendForm(
         "service_n1w14zb",       // Your Service ID
-        "template_2cjos2k",      // Your Template ID
+        "template_mqef6t3",      // Your Template ID
         form.current,
         "ZI_2YLh4rHUXqZiYS"     // Your Public Key
       )
