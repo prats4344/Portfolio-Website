@@ -10,33 +10,32 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "kanungopratiyusha@gmail.com",
+      href: "mailto:kanungopratiyusha@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 12345 67890",
-      href: "tel:+911234567890"
+      value: "+91 9438026599",
+      href: "tel:+919438026599"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, State, India",
+      value: "Bhubaneswar, Odisha, India",
       href: "#"
     }
   ];
-
   const socialLinks = [
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/yourusername"
+      href: "https://github.com/prats4344"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn", 
-      href: "https://linkedin.com/in/yourprofile"
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/pratiyushakanungo-sp4344"
     }
   ];
 
@@ -55,7 +54,6 @@ const Contact = () => {
             Whether you have a job opportunity or just want to connect, feel free to reach out!
           </p>
         </div>
-
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 slide-up">
