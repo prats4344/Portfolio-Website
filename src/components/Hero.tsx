@@ -18,17 +18,16 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center fade-in">
           <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium">
-            💻 B.Tech CSE Graduate | Looking for Opportunities
+            💻  B.Tech CSE AIML | Looking for Opportunities
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
-            <span className="gradient-text">Your Name</span>
+            <span className="gradient-text">Pratiyusha Kanungo</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            A passionate <span className="text-primary font-semibold">Full-Stack Developer</span> and 
-            recent B.Tech CSE graduate, ready to create innovative solutions and learn cutting-edge technologies.
+            A passionate <span className="text-primary font-semibold">Developer</span> and B.Tech CSE AIML student, ready to create innovative solutions and learn cutting-edge technologies.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -37,14 +36,21 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-6 text-lg">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
+              <a 
+                href="https://drive.google.com/file/d/1fYG_iVZqC32aDQhU69CtyudyhwotwhQe/view?usp=drive_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
           </div>
           
           <div className="flex justify-center gap-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/prats4344" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card border border-border hover:bg-muted transition-colors duration-300 group"
@@ -52,7 +58,7 @@ const Hero = () => {
               <Github className="h-6 w-6 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/pratiyushakanungo-sp4344" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card border border-border hover:bg-muted transition-colors duration-300 group"
@@ -60,7 +66,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:kanungopratiyusha@gmail.com"
               className="p-3 rounded-full bg-card border border-border hover:bg-muted transition-colors duration-300 group"
             >
               <Mail className="h-6 w-6 group-hover:scale-110 transition-transform" />
