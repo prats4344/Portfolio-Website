@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# 🌟 Pratiyusha Kanungo Portfolio
 
-## Project info
+Welcome to my personal portfolio!  
+I’m Pratiyusha Kanungo, a passionate B.Tech Computer Science (AIML) student and aspiring developer, eager to create innovative solutions and explore cutting-edge technologies.
 
-**URL**: https://lovable.dev/projects/4b145f5f-4a58-41c1-aa95-2eb57eaa25fa
+---
 
-## How can I edit this code?
+## 🚀 About Me
 
-There are several ways of editing your application.
+- 🎓 Currently pursuing B.Tech CSE (Artificial Intelligence & Machine Learning)  
+- 💻 Skilled in AIML, Java, Tailwind CSS, and modern web technologies  
+- 🌱 Continuously learning & keen on problem-solving and coding competitions  
+- 🔎 Looking for new opportunities and collaborations to grow professionally
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4b145f5f-4a58-41c1-aa95-2eb57eaa25fa) and start prompting.
+## 🎨 Portfolio Highlights
 
-Changes made via Lovable will be committed automatically to this repo.
+- A clean, responsive React-based portfolio website built with Vite and Tailwind CSS.  
+- Showcases my academic journey, skills, projects, and achievements.  
+- Interactive sections with smooth scroll navigation and animated UI elements.  
+- Integrated social links for GitHub, LinkedIn, and direct email contact.  
+- Dynamic features including real-time current year, responsive mobile menu, and more.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎯 Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Hero Section:** Introduction with a clear call-to-action  
+- **Skills:** Highlights of my technical proficiencies  
+- **Projects:** Showcasing completed works and contributions  
+- **Education:** Detailed academic background with CGPA & percentage  
+- **Contact:** Easy methods to connect or collaborate  
+- **Clean Code:** Written in React with modern best practices  
+- **Responsive Design:** Perfectly adapts to all screen sizes  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
+This project is built with:  
+- Vite  
+- TypeScript  
+- React  
+- shadcn-ui  
 - Tailwind CSS
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/4b145f5f-4a58-41c1-aa95-2eb57eaa25fa) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## 🌐 Live Demo
 
-Yes, you can!
+Check out my deployed portfolio at:  
+[https://portfolio-website-ten-pi-10.vercel.app/](https://portfolio-website-ten-pi-10.vercel.app/)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📬 Contact Me
+
+- [GitHub](https://github.com/prats4344)  
+- [LinkedIn](https://www.linkedin.com/in/pratiyushakanungo-sp4344)  
+- Email: kanungopratiyusha@gmail.com
+
+---
+
+## 💡 Inspiration & Credits
+
+Special thanks to the open-source community and all UI libraries that helped me craft this portfolio!
+
+---
+
+✨ **Feel free to explore, suggest enhancements, or collaborate! Thanks for visiting!** ✨
+
+
+
