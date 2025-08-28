@@ -20,21 +20,23 @@ const Hero = () => {
           <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium">
             💻  B.Tech CSE AIML | Looking for Opportunities
           </Badge>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
             <span className="gradient-text">Pratiyusha Kanungo</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             A passionate <span className="text-primary font-semibold">Developer</span> and B.Tech CSE AIML student, ready to create innovative solutions and learn cutting-edge technologies.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="px-8 py-6 text-lg group">
-              View My Work 
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="#projects">
+              <Button size="lg" className="px-8 py-6 text-lg group">
+                View My Work 
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
             <Button variant="outline" size="lg" className="px-8 py-6 text-lg">
               <a 
                 href="https://drive.google.com/file/d/1fYG_iVZqC32aDQhU69CtyudyhwotwhQe/view?usp=drive_link" 
@@ -47,7 +49,7 @@ const Hero = () => {
               </a>
             </Button>
           </div>
-          
+
           <div className="flex justify-center gap-6">
             <a 
               href="https://github.com/prats4344" 
@@ -74,7 +76,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl animate-pulse"></div>
