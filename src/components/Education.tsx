@@ -24,7 +24,7 @@ const Education = () => {
       institution: "DAV Public School",
       location: "Cuttack, Odisha",
       duration: "2021 - 2023",
-      cgpa: "77.8%",
+      cgpa: "77.8",
       highlights: [
         "Mathematics",
         "Physics",
