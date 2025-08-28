@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,38 +8,63 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 
 const Contact = () => {
+  const form = useRef();
+
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
       value: "kanungopratiyusha@gmail.com",
-      href: "mailto:kanungopratiyusha@gmail.com"
+      href: "mailto:kanungopratiyusha@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "+91 9438026599",
-      href: "tel:+919438026599"
+      href: "tel:+919438026599",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Bhubaneswar, Odisha, India",
-      href: "#"
-    }
+      href: "#",
+    },
   ];
+
   const socialLinks = [
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/prats4344"
+      href: "https://github.com/prats4344",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/pratiyushakanungo-sp4344"
-    }
+      href: "https://www.linkedin.com/in/pratiyushakanungo-sp4344",
+    },
   ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_n1w14zb", // Your Service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        form.current,
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message, please try again.");
+          console.error(error.text);
+        }
+      );
+  };
 
   return (
     <section id="contact" className="py-20 bg-muted/30">
@@ -50,10 +77,12 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm actively looking for new opportunities and would love to hear from you. 
-            Whether you have a job opportunity or just want to connect, feel free to reach out!
+            I'm actively looking for new opportunities and would love to hear
+            from you. Whether you have a job opportunity or just want to connect,
+            feel free to reach out!
           </p>
         </div>
+
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 slide-up">
@@ -70,8 +99,8 @@ const Contact = () => {
                     <div className="flex-1">
                       <p className="text-sm text-muted-foreground">{item.label}</p>
                       {item.href !== "#" ? (
-                        <a 
-                          href={item.href} 
+                        <a
+                          href={item.href}
                           className="font-medium hover:text-primary transition-colors"
                         >
                           {item.value}
@@ -114,36 +143,85 @@ const Contact = () => {
                 <CardTitle className="text-xl">Send Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">First Name</label>
-                      <Input placeholder="Your first name" />
+                      <label
+                        htmlFor="user_firstname"
+                        className="text-sm font-medium mb-2 block"
+                      >
+                        First Name
+                      </label>
+                      <Input
+                        id="user_firstname"
+                        name="user_firstname"
+                        placeholder="Your first name"
+                        required
+                      />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Last Name</label>
-                      <Input placeholder="Your last name" />
+                      <label
+                        htmlFor="user_lastname"
+                        className="text-sm font-medium mb-2 block"
+                      >
+                        Last Name
+                      </label>
+                      <Input
+                        id="user_lastname"
+                        name="user_lastname"
+                        placeholder="Your last name"
+                        required
+                      />
                     </div>
                   </div>
-                  
+
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Email</label>
-                    <Input type="email" placeholder="your.email@example.com" />
-                  </div>
-                  
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Subject</label>
-                    <Input placeholder="What's this about?" />
-                  </div>
-                  
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Message</label>
-                    <Textarea 
-                      placeholder="Tell me about your project or opportunity..."
-                      className="min-h-[120px]"
+                    <label
+                      htmlFor="user_email"
+                      className="text-sm font-medium mb-2 block"
+                    >
+                      Email
+                    </label>
+                    <Input
+                      id="user_email"
+                      type="email"
+                      name="user_email"
+                      placeholder="your.email@example.com"
+                      required
                     />
                   </div>
-                  
+
+                  <div>
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium mb-2 block"
+                    >
+                      Subject
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      placeholder="What's this about?"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium mb-2 block"
+                    >
+                      Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about your project or opportunity..."
+                      className="min-h-[120px]"
+                      required
+                    />
+                  </div>
+
                   <Button type="submit" className="w-full">
                     <Send className="mr-2 h-4 w-4" />
                     Send Message
