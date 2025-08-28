@@ -5,30 +5,30 @@ import { GraduationCap, Award, BookOpen } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science Engineering",
-      institution: "Your University Name",
-      location: "City, State",
-      duration: "2020 - 2024",
-      cgpa: "8.5/10",
+      degree: "Bachelor of Technology in Computer Science Engineering (AIML)",
+      institution: "Institute of Technical Education and Research",
+      location: "Bhubaneswar, Odisha",
+      duration: "2023 - 2027",
+      cgpa: "8.12/10",
       highlights: [
         "Data Structures and Algorithms",
         "Object-Oriented Programming",
         "Database Management Systems",
         "Software Engineering",
-        "Machine Learning Fundamentals"
+        "Machine Learning",
+        "Artificial Intelligence"
       ]
     },
     {
       degree: "Higher Secondary Education (12th)",
-      institution: "Your School Name",
-      location: "City, State", 
-      duration: "2018 - 2020",
-      cgpa: "85%",
+      institution: "DAV Public School",
+      location: "Cuttack, Odisha",
+      duration: "2021 - 2023",
+      Percentage: "77.8%",
       highlights: [
         "Mathematics",
-        "Physics", 
-        "Chemistry",
-        "Computer Science"
+        "Physics",
+        "Chemistry"
       ]
     }
   ];
@@ -36,11 +36,11 @@ const Education = () => {
   const achievements = [
     {
       title: "Academic Excellence",
-      description: "Consistently maintained above 8.0 CGPA throughout the degree program"
+      description: "Consistently maintained decent CGPA throughout the degree program"
     },
     {
       title: "Project Lead",
-      description: "Led a team of 4 students for the final year capstone project"
+      description: "Led a team of 3 for a Club project"
     },
     {
       title: "Technical Workshop",
@@ -48,7 +48,7 @@ const Education = () => {
     },
     {
       title: "Coding Competitions",
-      description: "Participated in inter-college programming contests and hackathons"
+      description: "Participated in programming contests and hackathons"
     }
   ];
 
