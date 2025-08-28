@@ -49,21 +49,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_n1w14zb", // Your Service ID
-        "template_2cjos2k", // Replace with your EmailJS Template ID
+        "service_n1w14zb",       // Your Service ID
+        "template_2cjos2k",      // Your Template ID
         form.current,
-        "Zl_2YLh4rHUXqZiYS" // Replace with your EmailJS Public Key
+        "ZI_2YLh4rHUXqZiYS"     // Your Public Key
       )
-      .then(
-        (result) => {
-          alert("Message sent successfully!");
-          e.target.reset();
-        },
-        (error) => {
-          alert("Failed to send message, please try again.");
-          console.error(error.text);
-        }
-      );
+      .then((result) => {
+        console.log("Email sent successfully:", result.text);
+        alert("Message sent successfully!");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error.text);
+        alert("Failed to send message. Please try again.");
+      });
   };
 
   return (
@@ -147,28 +146,28 @@ const Contact = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label
-                        htmlFor="user_firstname"
+                        htmlFor="name"
                         className="text-sm font-medium mb-2 block"
                       >
                         First Name
                       </label>
                       <Input
-                        id="user_firstname"
-                        name="user_firstname"
+                        id="name"
+                        name="name"
                         placeholder="Your first name"
                         required
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor="user_lastname"
+                        htmlFor="lastname"
                         className="text-sm font-medium mb-2 block"
                       >
                         Last Name
                       </label>
                       <Input
-                        id="user_lastname"
-                        name="user_lastname"
+                        id="lastname"
+                        name="lastname"
                         placeholder="Your last name"
                         required
                       />
@@ -177,15 +176,15 @@ const Contact = () => {
 
                   <div>
                     <label
-                      htmlFor="user_email"
+                      htmlFor="email"
                       className="text-sm font-medium mb-2 block"
                     >
                       Email
                     </label>
                     <Input
-                      id="user_email"
+                      id="email"
                       type="email"
-                      name="user_email"
+                      name="email"
                       placeholder="your.email@example.com"
                       required
                     />
