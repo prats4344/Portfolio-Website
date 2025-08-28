@@ -48,7 +48,7 @@ const Skills = () => {
     },
     {
       name: "Databases for Developers: Foundation - Oracle",
-      link: "https://ibb.co/ccR162Wr"
+      link: "https://drive.google.com/file/d/1KsTmvzIFoGl3moTNSOi5sCneQvoOA3Eg/view?usp=sharing"
     }
   ];
 
