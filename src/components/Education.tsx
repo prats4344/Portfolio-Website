@@ -5,7 +5,7 @@ import { GraduationCap, Award, BookOpen } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science Engineering (AIML)",
+      degree: "B.TECH in Computer Science Engineering (AIML)",
       institution: "Institute of Technical Education and Research",
       location: "Bhubaneswar, Odisha",
       duration: "2023 - 2027",
@@ -24,7 +24,7 @@ const Education = () => {
       institution: "DAV Public School",
       location: "Cuttack, Odisha",
       duration: "2021 - 2023",
-      cgpa: "77.8%",
+      percentage: "77.8%",
       highlights: [
         "Mathematics",
         "Physics",
@@ -81,7 +81,9 @@ const Education = () => {
                     <div className="space-y-1 text-muted-foreground">
                       <p className="font-medium">{edu.institution}</p>
                       <p className="text-sm">{edu.location} • {edu.duration}</p>
-                      <p className="text-sm font-medium text-primary">CGPA: {edu.cgpa}</p>
+                      <p className="text-sm font-medium text-primary">
+                        {index === 0 ? "CGPA" : "Percentage"}: {edu.cgpa}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -133,3 +135,4 @@ const Education = () => {
 };
 
 export default Education;
+
