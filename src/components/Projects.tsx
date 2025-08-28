@@ -6,36 +6,36 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Website",
-      description: "A full-stack e-commerce platform built with React and Node.js. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      github: "https://github.com",
-      live: "https://demo.com",
+      title: "Smart Fintech Risk Assessment System",
+      description: "An AI-powered web app that predicts credit risk, and worthy financial insights.",
+      technologies: ["Python", "Flask", "Scikit-learn", "Pandas", "Matplotlib"],
+      github: "https://github.com/prats4344/smart-fintech-risk-app",
+      live: "https://smart-fintech-risk-app-1.onrender.com",
       status: "Completed"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates. Users can create projects, assign tasks, and track progress with an intuitive dashboard.",
-      technologies: ["React", "Firebase", "Material-UI", "JavaScript"],
-      github: "https://github.com",
-      live: "https://demo.com",
+      title: "InventoryPal – Smart Inventory Management System",
+      description: "Management system that logs products from barcodes into Excel, updates stock in real time, and generates clear summary insights.",
+      technologies: ["Python", "Flask", "SQLite", "JavaScript", "Chart.js"],
+      github: "https://github.com/prats4344/InventoryPal",
+      live: "https://inventorypal.onrender.com/",
       status: "Completed"
     },
     {
-      title: "Weather Forecast App",
-      description: "A responsive weather application that provides current weather conditions and 7-day forecasts. Features location-based weather and beautiful UI animations.",
-      technologies: ["JavaScript", "CSS3", "OpenWeather API", "Chart.js"],
-      github: "https://github.com",
-      live: "https://demo.com",
+      title: "FinWise – Personal Finance Tracker",
+      description: "A personal finance tracker that helps users manage expenses, analyze spending patterns, and visualize financial health with smart insights.",
+      technologies: ["Python", "Flask", "SQLite", "Chart.js", "Pandas"],
+      github: "https://github.com/prats4344/finwise-finance-tracker",
+      live: "https://finwise-app.onrender.com",
       status: "Completed"
     },
     {
-      title: "Social Media Dashboard",
-      description: "A comprehensive dashboard for managing multiple social media accounts. Built as a final year project with advanced analytics and automation features.",
-      technologies: ["React", "Python", "Django", "PostgreSQL", "REST API"],
-      github: "https://github.com",
-      live: "#",
-      status: "In Progress"
+      title: "Customer Churn Prediction",
+      description: "A real-world MLOps project that predicts telecom customer churn with XGBoost, integrates Optuna tuning, MLflow tracking, SHAP explainability, and deploys seamlessly via FastAPI backend & Streamlit web app.",
+      technologies: ["Python", "XGBoost", "Optuna", "FastAPI", "Streamlit"],
+      github: "https://github.com/prats4344/churn-prediction-project",
+      live: "https://customer-churn-frontend.onrender.com",
+      status: "Completed"
     }
   ];
 
@@ -95,7 +95,7 @@ const Projects = () => {
                     Code
                   </a>
                 </Button>
-                {project.live !== "#" && (
+                {project.live && project.live !== "#" && (
                   <Button 
                     size="sm" 
                     asChild
