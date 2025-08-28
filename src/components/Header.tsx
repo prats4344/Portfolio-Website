@@ -47,9 +47,7 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button variant="outline" size="sm">
-              Download CV
-            </Button>
+            {/* Removed Download CV button here */}
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -75,9 +73,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="outline" size="sm" className="self-start">
-                Download CV
-              </Button>
+              {/* Removed Download CV button here */}
             </div>
           </div>
         )}
