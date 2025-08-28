@@ -10,13 +10,13 @@ const Skills = () => {
         { name: "HTML/CSS", level: 90 },
         { name: "JavaScript", level: 85 },
         { name: "React", level: 80 },
-        { name: "TypeScript", level: 75 }
+        { name: "TypeScript", level: 70 }
       ]
     },
     {
       title: "Backend Development",
       skills: [
-        { name: "Express.js", level: 70 },
+        { name: "Express.js", level: 50 },
         { name: "Python", level: 90 },
         { name: "Java", level: 90 },
         { name: "SQL", level: 70 }
@@ -48,7 +48,7 @@ const Skills = () => {
     },
     {
       name: "Databases for Developers: Foundation - Oracle",
-      link: "#"
+      link: "https://ibb.co/ccR162Wr"
     }
   ];
 
