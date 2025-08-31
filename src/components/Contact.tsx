@@ -11,12 +11,6 @@ const Contact = () => {
       href: "mailto:kanungopratiyusha@gmail.com",
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 9438026599",
-      href: "tel:+919438026599",
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Bhubaneswar, Odisha, India",
