@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react"; // Phone removed
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -15,12 +15,6 @@ const Contact = () => {
       label: "Email",
       value: "kanungopratiyusha@gmail.com",
       href: "mailto:kanungopratiyusha@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 9438026599",
-      href: "tel:+919438026599",
     },
     {
       icon: MapPin,
@@ -49,10 +43,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_n1w14zb", // your service ID
-        "template_mqef6t3", // your template ID
+        "service_n1w14zb", 
+        "template_mqef6t3", 
         form.current,
-        "Zl_2YLh4rHUXqZiYS" // your public key
+        "Zl_2YLh4rHUXqZiYS" 
       )
       .then(
         () => {
