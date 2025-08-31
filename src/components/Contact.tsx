@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+>>>>>>> a29053e (Portfolio update)
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
