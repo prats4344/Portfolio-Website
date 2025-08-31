@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -47,7 +47,6 @@ const Contact = () => {
             feel free to reach out!
           </p>
         </div>
-
         <div className="max-w-6xl mx-auto grid lg:grid-cols-1 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 slide-up">
@@ -78,7 +77,6 @@ const Contact = () => {
                 ))}
               </CardContent>
             </Card>
-
             <Card className="card-glow">
               <CardHeader>
                 <CardTitle className="text-xl">Follow Me</CardTitle>
@@ -105,4 +103,6 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;
+
