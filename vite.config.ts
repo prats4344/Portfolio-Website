@@ -20,9 +20,5 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     include: ["framer-motion"],
   },
-  build: {
-    rollupOptions: {
-      external: ["framer-motion"], // Optional: externalize to avoid bundling issues
-    },
-  },
+  // No rollupOptions.external here
 }));
