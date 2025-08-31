@@ -196,4 +196,36 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-gray-900 dark:text-white rounded-2xl font-medium hover:scale-105 transition-all duration-300 hover:shadow-lg disabled:op
+                className="w-full flex items-center justify-center space-x-2 px-6 py-3 
+                           bg-gradient-to-r from-primary/20 to-secondary/20 
+                           border border-primary/30 text-gray-900 dark:text-white 
+                           rounded-2xl font-medium hover:scale-105 transition-all duration-300 
+                           hover:shadow-lg disabled:opacity-50 disabled:hover:scale-100 text-sm"
+              >
+                {isSubmitting ? (
+                  <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <Send size={14} />
+                )}
+                <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+              </button>
+
+              {submitStatus === "success" && (
+                <div className="text-center text-green-600 text-sm font-medium">
+                  Thanks for reaching out! 🌟
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="text-center text-red-500 text-sm">
+                  Failed to send. Please try again.
+                </div>
+              )}
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
