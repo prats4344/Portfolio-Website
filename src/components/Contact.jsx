@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, MapPin, Github, Linkedin } from "lucide-react"; // Phone removed
+import { Mail, MapPin, Github, Linkedin } from "lucide-react"; 
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
