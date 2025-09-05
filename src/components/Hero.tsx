@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(13, 17, 27, 0.8), rgba(13, 17, 27, 0.9)), url(${heroImage})`,
+        backgroundImage: linear-gradient(rgba(13, 17, 27, 0.8), rgba(13, 17, 27, 0.9)), url(${heroImage}),
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed"
@@ -39,8 +39,9 @@ const Hero = () => {
                 href="https://drive.google.com/file/d/1yYRZ7rMUGqcB4SAgXXk4312Yg5aayTNh/view?usp=sharing"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="no-underline"
+                className="flex items-center"
               >
+                <Download className="mr-2 h-5 w-5" />
                 View Resume
               </a>
             </Button>
@@ -79,4 +80,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
