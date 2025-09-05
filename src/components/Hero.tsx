@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -39,10 +39,9 @@ const Hero = () => {
                 href="https://drive.google.com/file/d/1yYRZ7rMUGqcB4SAgXXk4312Yg5aayTNh/view?usp=sharing"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center"
+                className="no-underline"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                View Resume
               </a>
             </Button>
           </div>
@@ -80,3 +79,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
