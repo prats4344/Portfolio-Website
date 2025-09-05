@@ -1,36 +1,61 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming & Core Concepts",
       skills: [
-        { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React", level: 80 },
-        { name: "TypeScript", level: 70 }
-      ]
+        { name: "Java", icon: "☕" },
+        { name: "Python", icon: "🐍" },
+        { name: "Object-Oriented Programming (OOPS)", icon: "🧩" },
+        { name: "Data Structures & Algorithms (DSA)", icon: "📊" },
+      ],
     },
     {
-      title: "Backend Development",
+      title: "Frontend Web Technologies & Frameworks",
       skills: [
-        { name: "Express.js", level: 50 },
-        { name: "Python", level: 90 },
-        { name: "Java", level: 90 },
-        { name: "SQL", level: 70 }
-      ]
+        { name: "HTML", icon: "🌐" },
+        { name: "CSS", icon: "🎨" },
+        { name: "Bootstrap", icon: "🅱️" },
+        { name: "JavaScript", icon: "⚡" },
+      ],
     },
     {
-      title: "Tools & Technologies",
+      title: "Backend Technologies",
       skills: [
-        { name: "Git/GitHub", level: 80 },
-        { name: "MongoDB", level: 70 },
-        { name: "Figma", level: 60 },
-        { name: "VS Code", level: 90 }
-      ]
-    }
+        { name: "Express.js", icon: "🖥️" },
+      ],
+    },
+    {
+      title: "Machine Learning & Data Science",
+      skills: [
+        { name: "Scikit-learn", icon: "🤖" },
+        { name: "Pandas", icon: "🐼" },
+        { name: "NumPy", icon: "🔢" },
+        { name: "Matplotlib", icon: "📈" },
+        { name: "Natural Language Processing (NLP)", icon: "💬" },
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "OpenPyXL", icon: "📘" },
+        { name: "MySQL", icon: "🗄️" },
+        { name: "SQLite", icon: "💾" },
+        { name: "MongoDB", icon: "🍃" },
+      ],
+    },
+    {
+      title: "Tools & Version Control",
+      skills: [
+        { name: "Git", icon: "🌱" },
+        { name: "AWS", icon: "☁️" },
+        { name: "Docker", icon: "🐳" },
+        { name: "VS Code", icon: "📝" },
+        { name: "Figma", icon: "🎨" },
+      ],
+    },
   ];
 
   const certifications = [
@@ -78,12 +103,12 @@ const Skills = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <Progress value={skill.level} className="h-2" />
+                  <div
+                    key={skillIndex}
+                    className="flex items-center space-x-3 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                  >
+                    <span className="text-xl">{skill.icon}</span>
+                    <span className="font-medium">{skill.name}</span>
                   </div>
                 ))}
               </CardContent>
@@ -102,10 +127,10 @@ const Skills = () => {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-4">
                 {certifications.map((cert, index) => (
-                  <a 
-                    key={index} 
-                    href={cert.link} 
-                    target="_blank" 
+                  <a
+                    key={index}
+                    href={cert.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
                   >
