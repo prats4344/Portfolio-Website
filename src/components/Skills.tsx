@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+// If you don’t have Badge yet, comment out the next line
+// import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
@@ -23,9 +24,7 @@ const Skills = () => {
     },
     {
       title: "Backend Technologies",
-      skills: [
-        { name: "Express.js", icon: "🖥️" },
-      ],
+      skills: [{ name: "Express.js", icon: "🖥️" }],
     },
     {
       title: "Machine Learning & Data Science",
@@ -61,38 +60,39 @@ const Skills = () => {
   const certifications = [
     {
       name: "AWS Cloud Virtual Experience Program",
-      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_aCLeM3ZiGNd9xRiuz_1751296774040_completion_certificate.pdf"
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_aCLeM3ZiGNd9xRiuz_1751296774040_completion_certificate.pdf",
     },
     {
       name: "Mastering Generative AI and ChatGPT",
-      link: "https://media.geeksforgeeks.org/courses/certificates/3b0094079ceed7010d4ec98c97a23fd1.pdf"
+      link: "https://media.geeksforgeeks.org/courses/certificates/3b0094079ceed7010d4ec98c97a23fd1.pdf",
     },
     {
       name: "Artificial Intelligence - IIT Guwahati (Alcheringa)",
-      link: "https://cert.diceid.com/cid/o5cRR1fcaL"
+      link: "https://cert.diceid.com/cid/o5cRR1fcaL",
     },
     {
       name: "Databases for Developers: Foundation - Oracle",
-      link: "https://drive.google.com/file/d/1KsTmvzIFoGl3moTNSOi5sCneQvoOA3Eg/view?usp=sharing"
-    }
+      link: "https://drive.google.com/file/d/1KsTmvzIFoGl3moTNSOi5sCneQvoOA3Eg/view?usp=sharing",
+    },
   ];
 
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-16 slide-up">
-          <Badge variant="outline" className="mb-4">
-            Technical Skills
-          </Badge>
+          {/* Uncomment this once Badge is available */}
+          {/* <Badge variant="outline" className="mb-4">Technical Skills</Badge> */}
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             My <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills and proficiency levels 
-            gained through academic projects and self-learning.
+            A comprehensive overview of my technical skills and proficiency
+            levels gained through academic projects and self-learning.
           </p>
         </div>
 
+        {/* Skills Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="card-glow slide-up">
@@ -116,6 +116,7 @@ const Skills = () => {
           ))}
         </div>
 
+        {/* Certifications */}
         <div className="max-w-4xl mx-auto slide-up">
           <Card className="card-glow">
             <CardHeader>
