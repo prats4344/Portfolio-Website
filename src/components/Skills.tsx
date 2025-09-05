@@ -1,59 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// If you don’t have Badge yet, comment out the next line
-// import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Core Concepts",
-      skills: [
-        { name: "Java", icon: "☕" },
-        { name: "Python", icon: "🐍" },
-        { name: "Object-Oriented Programming (OOPS)", icon: "🧩" },
-        { name: "Data Structures & Algorithms (DSA)", icon: "📊" },
-      ],
+      title: "Frontend Development",
+      skills: ["HTML/CSS", "JavaScript", "React", "TypeScript"],
     },
     {
-      title: "Frontend Web Technologies & Frameworks",
-      skills: [
-        { name: "HTML", icon: "🌐" },
-        { name: "CSS", icon: "🎨" },
-        { name: "Bootstrap", icon: "🅱️" },
-        { name: "JavaScript", icon: "⚡" },
-      ],
+      title: "Backend Development",
+      skills: ["Express.js", "Python", "Java", "SQL"],
     },
     {
-      title: "Backend Technologies",
-      skills: [{ name: "Express.js", icon: "🖥️" }],
-    },
-    {
-      title: "Machine Learning & Data Science",
-      skills: [
-        { name: "Scikit-learn", icon: "🤖" },
-        { name: "Pandas", icon: "🐼" },
-        { name: "NumPy", icon: "🔢" },
-        { name: "Matplotlib", icon: "📈" },
-        { name: "Natural Language Processing (NLP)", icon: "💬" },
-      ],
-    },
-    {
-      title: "Databases",
-      skills: [
-        { name: "OpenPyXL", icon: "📘" },
-        { name: "MySQL", icon: "🗄️" },
-        { name: "SQLite", icon: "💾" },
-        { name: "MongoDB", icon: "🍃" },
-      ],
-    },
-    {
-      title: "Tools & Version Control",
-      skills: [
-        { name: "Git", icon: "🌱" },
-        { name: "AWS", icon: "☁️" },
-        { name: "Docker", icon: "🐳" },
-        { name: "VS Code", icon: "📝" },
-        { name: "Figma", icon: "🎨" },
-      ],
+      title: "Tools & Technologies",
+      skills: ["Git/GitHub", "MongoDB", "Figma", "VS Code"],
     },
   ];
 
@@ -79,10 +39,11 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-16 slide-up">
-          {/* Uncomment this once Badge is available */}
-          {/* <Badge variant="outline" className="mb-4">Technical Skills</Badge> */}
+          <Badge variant="outline" className="mb-4">
+            Technical Skills
+          </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             My <span className="gradient-text">Expertise</span>
           </h2>
@@ -105,10 +66,9 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center space-x-3 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    className="p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
                   >
-                    <span className="text-xl">{skill.icon}</span>
-                    <span className="font-medium">{skill.name}</span>
+                    <span className="font-medium">{skill}</span>
                   </div>
                 ))}
               </CardContent>
@@ -124,7 +84,6 @@ const Skills = () => {
                 Certifications & Courses
               </CardTitle>
             </CardHeader>
-
             <CardContent>
               <div className="grid md:grid-cols-2 gap-4">
                 {certifications.map((cert, index) => (
@@ -149,3 +108,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
